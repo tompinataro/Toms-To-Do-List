@@ -5,13 +5,56 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <script src="./scripts/axios.js"></script>
-  <script src="./scripts/client.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script defer src="./scripts/client.js"></script>
   <title>SQL TO-DO List</title>
 </head>
 <body>
   <header>
     <h1>SQL TO-DO List</h1>
   </header>
-
-</body>
+  <section id="addTask">
+    <h2>Add New Task</h2>
+    <form id="form">
+    <input type="text" data-testid="toDoTextInput" id="toDoTextInput" value="" placeholder="New Task">
+    <!-- //1. Add button onclick       -->
+    <button onclick="addTask(event)" type="button" data-testid="submitButton"
+            id="addButton">Add Task</button>    
+    </form>
+  </section>
+  <section>
+    <h2>All Tasks</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Task</th>
+          <th>Completed?</th>
+        </tr>
+      </thead>
+      <tbody id="viewTodos">
+      </tbody>
+    </table>
+  </section>
+ </body>
 </html>
+
+<!-- Create a <form> in index.html with a single <input> 
+  for collecting to-do text and a submit `<button`>.
+  Need a function to run when the submit <button> gets clicked.
+  Function will need to get what the user typed into the input and m
+  ake an HTTP POST /todos request that sends data that looks something like:
+  {newTodoText: 'whatever the user typed'} -->
+
+  <!-- The tests **will not work** if you do not follow these steps.
+
+1. The input you use to collect "to-do text" user input must have:
+    * `data-testid="toDoTextInput"`
+2. The button that a user clicks to "create" a new to-do must have:
+  * `data-testid="submitButton"`
+
+
+
+
+
+
+  
