@@ -1,4 +1,4 @@
-# 48-hour Sprint: full-stack CRUD to-do list application
+# 48-hour Sprint: Full-Stack CRUD to-do list application
 
 Designed and built a To-Do List App with client-side, server-side, and an SQL database
 
